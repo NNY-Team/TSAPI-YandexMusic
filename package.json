@@ -17,7 +17,8 @@
     "build": "tsup src/index.ts --dts --format esm,cjs",
     "dev": "tsup src/index.ts --watch --dts --format esm,cjs",
     "example": "ts-node example-usage.ts",
-    "download-example": "ts-node test-download-track.ts"
+    "download-example": "ts-node test-download-track.ts",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
