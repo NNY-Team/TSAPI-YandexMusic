@@ -1,0 +1,49 @@
+{
+  "name": "yandex-music-api-ts",
+  "version": "0.0.1",
+  "description": "Yandex Music unofficial api library for type script",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "dev": "tsup src/index.ts --watch --dts --format esm,cjs",
+    "example": "ts-node example-usage.ts",
+    "download-example": "ts-node test-download-track.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberhard/TSAPI-YandexMusic.git"
+  },
+  "keywords": [
+    "yandex",
+    "music",
+    "typescript",
+    "api"
+  ],
+  "author": "kirai neshemiron",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/cyberhard/TSAPI-YandexMusic/issues"
+  },
+  "homepage": "https://github.com/cyberhard/TSAPI-YandexMusic#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "node-id3": "^0.2.9"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "electron": "^30.0.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

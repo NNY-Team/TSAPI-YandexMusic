@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "no-string-throw": true,
+    "no-unused-expression": {
+      "options": ["allow-fast-null-checks", "allow-new"]
+    },
+    "no-duplicate-variable": true,
+    "curly": true,
+    "class-name": true,
+    "semicolon": [true, "always"],
+    "triple-equals": {
+      "options": ["allow-null-check", "allow-undefined-check"]
+    }
+  },
+  "defaultSeverity": "warning"
+}
