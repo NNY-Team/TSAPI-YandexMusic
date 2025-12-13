@@ -207,6 +207,7 @@ var UsersApi = class extends BaseApi {
 };
 
 // src/utils/hashUtils.ts
+var import_crypto = require("crypto");
 async function md5Hash(data) {
   if (typeof window !== "undefined" && window.crypto && window.crypto.subtle) {
     try {
@@ -221,8 +222,7 @@ async function md5Hash(data) {
     }
   }
   try {
-    const crypto2 = require("crypto");
-    return crypto2.createHash("md5").update(data).digest("hex");
+    return (0, import_crypto.createHash)("md5").update(data).digest("hex");
   } catch (err) {
     console.error("Node.js MD5 error:", err);
     return simpleHash(data);
@@ -233,7 +233,7 @@ function simpleHash(str) {
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
     hash = (hash << 5) - hash + char;
-    hash = hash & hash;
+    hash |= 0;
   }
   return Math.abs(hash).toString(16);
 }
