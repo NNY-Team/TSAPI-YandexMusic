@@ -6,6 +6,5 @@ node_modules
 .github/
 .venv/
 .vscode/
-dist/
 // Snyk VS Code extension cache
 *.dccache
