@@ -26,7 +26,7 @@ export class SearchApi extends BaseApi {
       text,
       type,
       page,
-      nococrrect: nocorrect,
+      nocorrect,
     });
     return response.result;
   }

@@ -558,7 +558,7 @@ var SearchApi = class extends BaseApi {
       text,
       type,
       page,
-      nococrrect: nocorrect
+      nocorrect
     });
     return response.result;
   }
